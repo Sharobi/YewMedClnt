@@ -1,0 +1,22 @@
+var getFieldText = {
+		fieldReq : "is required!",
+		numberCheck : "Please enter number",
+		fieldempty : "is empty!",
+		frmdtGrtEnddt : "End Date must be greater than Start Date",
+		checkNegative : "should be positive number",
+		notDecimalChk : "should not be decimal number",
+		chkVendorSelect : "Please select any vendor",
+		phnDigitLengthCheckErr : "Please enter 10 digit number",
+		discGrtMaxDiscErr : "Discount Percentage should not be greater than Maximum Discout Percentage",
+		zero:"There is some error.Please try again!",
+		greaterthanzero:"Data successfully added/updated!",
+		minusone:"Data successfully deleted!",
+		minustwo:"Data duplicity error!",
+		minusthree:"Transaction failure, cannot delete!",
+		mailsentsuccess:"Email sent successfully!",
+		dataPostSuccess:"Data successfully posted!",
+		dataCloseSuccess:"Data successfully closed!",
+		wrongBarcode : "No item matches with this barcode!",
+		selectdata : "Please select data for post.",
+	    noemailfound : "No customer email found."		
+};

@@ -1,0 +1,15 @@
+var getPurInvRetText = {
+		fieldReq : "Field is required!",
+		dataSucAdd : "Purchase Return Invoice successfully added/updated!",
+		dataNotAdd : "Purchase Return Invoice not added/updated.Please try again!",
+		dataSucPost : "Purchase Return Invoice successfully posted!",
+		dataNotPost : "Purchase Return Invoice not posted.Please try again!",
+		dataSucUpdate : "Purchase Return Invoice successfully updated!",
+		dataNotUpdate : "Purchase Return Invoice not updated.Please try again!",
+		dataSucDelete : "Purchase Return Invoice successfully deleted!",
+		dataNotDelete : "Purchase Return Invoice not deleted.Please try again!",
+		Confirmation : "Confirmation",
+		dataTablePlaceHolder : "search within table data...",
+		vendorChangeError : "Items already listed under this vendor. Before changing vendor, please delete the items!",
+		addEditChckBefrSave : "Please add/update the item",
+};

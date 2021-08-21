@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+            http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+            http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+    <context:annotation-config />
+    <context:component-scan base-package="com.sharobi.yewpos.acc.controller" annotation-config="true" />
+    <context:component-scan base-package="com.sharobi.yewpos.inv.controller" annotation-config="true" />
+    <context:component-scan base-package="com.sharobi.yewpos.login.controller" annotation-config="true" />
+    <context:component-scan base-package="com.sharobi.yewpos.proc.controller" annotation-config="true" />
+    <context:component-scan base-package="com.sharobi.yewpos.role.controller" annotation-config="true" />
+    <context:component-scan base-package="com.sharobi.yewpos.pos.controller" annotation-config="true" />
+    <context:component-scan base-package="com.sharobi.yewpos.storemgnt.controller" annotation-config="true" />
+     <context:component-scan base-package="com.sharobi.yewpos.admin.controller" annotation-config="true" />
+    <mvc:annotation-driven />
+    <!-- Handler Beans -->
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+  <property name="defaultLocale" value="en" />
+ </bean>
+ <mvc:interceptors>
+  <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+   <property name="paramName" value="lang" />
+  </bean>
+ </mvc:interceptors>
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+  <property name="basename" value="classpath:com/sharobi/yewpos/resources/message-resource" />
+  <property name="defaultEncoding" value="UTF-8" />
+ </bean>
+
+
+
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <array>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+                </bean>
+            </array>
+        </property>
+    </bean>
+	<!-- Tiles configuration -->
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles-definitions.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+		<property name="order" value="0" />
+	</bean>
+    <!-- View Resolver -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/pages/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+        <property name="order" value="1" />
+    </bean>
+    
+   
+   
+    
+    
+    
+</beans> 

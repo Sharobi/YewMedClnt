@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="mainTemplate" template="/pages/templates/maintemplate.jsp">
+		<put-attribute name="header" value="/pages/common/header.jsp" />
+		<put-attribute name="leftMenu" value="/pages/common/leftmenu.jsp" />
+		<put-attribute name="footer" value="/pages/common/footer.jsp" />
+	</definition>
+	<definition name="loginTemplate" template="/pages/templates/logintemplate.jsp">
+	</definition>
+	<!-- Role Module -->
+	<definition name="authentication.login" extends="loginTemplate">
+		<put-attribute name="title" value="LOGIN" />
+		<put-attribute name="body" value="/pages/login/login.jsp" />
+	</definition>
+	<!-- End Role Module -->
+	<!-- POS Module -->
+	<definition name="home" extends="mainTemplate">
+		<put-attribute name="title" value="HOME" />
+		<put-attribute name="body" value="/pages/pos/home.jsp" />
+	</definition>
+	<definition name="adminhome" extends="mainTemplate">
+		<put-attribute name="title" value="HOME" />
+		<put-attribute name="body" value="/pages/pos/dashboard_home.jsp" />
+	</definition>
+	<definition name="pos.pos" extends="mainTemplate">
+		<put-attribute name="title" value="POS" />
+		<put-attribute name="body" value="/pages/pos/pos.jsp" />
+	</definition>
+	<definition name="pos.modifycashmemo" extends="mainTemplate">
+		<put-attribute name="title" value="MODIFY CASHMEMO" />
+		<put-attribute name="body" value="/pages/pos/modifycashmemo.jsp" />
+	</definition>
+	<definition name="pos.reprintcashmemo" extends="mainTemplate">
+		<put-attribute name="title" value="REPRINT CASHMEMO" />
+		<put-attribute name="body" value="/pages/pos/reprintcashmemo.jsp" />
+	</definition>
+	<definition name="pos.returnmemo" extends="mainTemplate">
+		<put-attribute name="title" value="RETURN MEMO" />
+		<put-attribute name="body" value="/pages/pos/returnmemo.jsp" />
+	</definition>
+	<definition name="pos.modifyreturnmemo" extends="mainTemplate">
+		<put-attribute name="title" value="MODIFY RETURNMEMO" />
+		<put-attribute name="body" value="/pages/pos/modifyreturnmemo.jsp" />
+	</definition>
+	<definition name="pos.reprintreturnmemo" extends="mainTemplate">
+		<put-attribute name="title" value="REPRINT RETURNMEMO" />
+		<put-attribute name="body" value="/pages/pos/reprintreturnmemo.jsp" />
+	</definition>
+	<definition name="pos.customer" extends="mainTemplate">
+		<put-attribute name="title" value="CUSTOMER" />
+		<put-attribute name="body" value="/pages/pos/customer.jsp" />
+	</definition>
+	<definition name="pos.customerpaydet" extends="mainTemplate">
+		<put-attribute name="title" value="CUSTOMER PAYMENT DETAILS" />
+		<put-attribute name="body" value="/pages/pos/customerpaymentdet.jsp" />
+	</definition>
+	<definition name="pos.customerpay" extends="mainTemplate">
+		<put-attribute name="title" value="CUSTOMER PAYMENT" />
+		<put-attribute name="body" value="/pages/pos/customerpayment.jsp" />
+	</definition>
+	
+	
+	 
+	
+	
+	<!-- End POS Module -->
+	<!-- Inventory Module -->
+	<definition name="inv.brand" extends="mainTemplate">
+		<put-attribute name="title" value="BRAND" />
+		<put-attribute name="body" value="/pages/inv/brand.jsp" />
+	</definition>
+	<definition name="inv.category" extends="mainTemplate">
+		<put-attribute name="title" value="CATEGORY" />
+		<put-attribute name="body" value="/pages/inv/category.jsp" />
+	</definition>
+	<definition name="inv.content" extends="mainTemplate">
+		<put-attribute name="title" value="CONTENT" />
+		<put-attribute name="body" value="/pages/inv/content.jsp" />
+	</definition>
+	<definition name="inv.doctor" extends="mainTemplate">
+		<put-attribute name="title" value="DOCTOR" />
+		<put-attribute name="body" value="/pages/inv/doctor.jsp" />
+	</definition>
+	<definition name="inv.group" extends="mainTemplate">
+		<put-attribute name="title" value="GROUP" />
+		<put-attribute name="body" value="/pages/inv/group.jsp" />
+	</definition>
+	<definition name="inv.item" extends="mainTemplate">
+		<put-attribute name="title" value="ITEM" />
+		<put-attribute name="body" value="/pages/inv/item.jsp" />
+	</definition>
+	<definition name="inv.itemmst" extends="mainTemplate">
+		<put-attribute name="title" value="ITEM" />
+		<put-attribute name="body" value="/pages/inv/itemmst.jsp" />
+	</definition>
+	<definition name="inv.manufacturer" extends="mainTemplate">
+		<put-attribute name="title" value="MANUFACTURER" />
+		<put-attribute name="body" value="/pages/inv/manufacturer.jsp" />
+	</definition>
+	<definition name="inv.rack" extends="mainTemplate">
+		<put-attribute name="title" value="RACK" />
+		<put-attribute name="body" value="/pages/inv/rack.jsp" />
+	</definition>
+	<definition name="inv.schedule" extends="mainTemplate">
+		<put-attribute name="title" value="SCHEDULE" />
+		<put-attribute name="body" value="/pages/inv/schedule.jsp" />
+	</definition>
+	<definition name="inv.subcategory" extends="mainTemplate">
+		<put-attribute name="title" value="SUBCATEGORY" />
+		<put-attribute name="body" value="/pages/inv/subcategory.jsp" />
+	</definition>
+	<definition name="inv.unit" extends="mainTemplate">
+		<put-attribute name="title" value="UNIT" />
+		<put-attribute name="body" value="/pages/inv/unit.jsp" />
+	</definition>
+	<definition name="inv.stockentry" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK ENTRY" />
+		<put-attribute name="body" value="/pages/inv/stockentry.jsp" />
+	</definition>
+	<definition name="inv.stockadj" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK ADJUSTMENT" />
+		<put-attribute name="body" value="/pages/inv/stockadj.jsp" />
+	</definition>
+	<definition name="inv.stockexpissue" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK EXPIRY ISSUE" />
+		<put-attribute name="body" value="/pages/inv/stockexpissue.jsp" />
+	</definition>
+	<definition name="inv.stockexpissuereg" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK EXPIRY ISSUE REGISTER" />
+		<put-attribute name="body" value="/pages/inv/stockexpissuereg.jsp" />
+	</definition>
+	<definition name="inv.itemsearching" extends="mainTemplate">
+		<put-attribute name="title" value="ITEM SEARCHING" />
+		<put-attribute name="body" value="/pages/inv/itemsearching.jsp" />
+	</definition>
+	<definition name="inv.tax" extends="mainTemplate">
+		<put-attribute name="title" value="TAX" />
+		<put-attribute name="body" value="/pages/inv/tax.jsp" />
+	</definition>
+	
+	<!-- add on 16_2_2018 -->
+	
+   <definition name="inv.city" extends="mainTemplate">
+		<put-attribute name="title" value="City" />
+		<put-attribute name="body" value="/pages/inv/city.jsp" />
+	</definition>
+	<definition name="inv.zone" extends="mainTemplate">
+		<put-attribute name="title" value="Zone" />
+		<put-attribute name="body" value="/pages/inv/zone.jsp" />
+	</definition>
+	<definition name="inv.area" extends="mainTemplate">
+		<put-attribute name="title" value="Area" />
+		<put-attribute name="body" value="/pages/inv/area.jsp" />
+	</definition>
+	<definition name="inv.yearend" extends="mainTemplate">
+		<put-attribute name="title" value="Year end" />
+		<put-attribute name="body" value="/pages/inv/yearend.jsp" />
+	</definition>
+	<!-- End Inventory Module -->
+	<!-- Procurement Module -->
+	<definition name="proc.purinvoice" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE INVOICE" />
+		<put-attribute name="body" value="/pages/proc/purinvoice.jsp" />
+	</definition>
+	<definition name="proc.purinvoicedet" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE INVOICE DETAILS" />
+		<put-attribute name="body" value="/pages/proc/purinvoicedet.jsp" />
+	</definition>
+	<definition name="proc.purreturn" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE RETURN" />
+		<put-attribute name="body" value="/pages/proc/purreturn.jsp" />
+	</definition>
+	<definition name="proc.vendor" extends="mainTemplate">
+		<put-attribute name="title" value="VENDOR" />
+		<put-attribute name="body" value="/pages/proc/vendor.jsp" />
+	</definition>
+	<definition name="proc.purinvoicereg" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE INVOICE REGISTER" />
+		<put-attribute name="body" value="/pages/proc/purinvreg.jsp" />
+	</definition>
+	<definition name="proc.purreturnreg" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE RETURN REGISTER" />
+		<put-attribute name="body" value="/pages/proc/purretreg.jsp" />
+	</definition>
+	<definition name="proc.vendorpay" extends="mainTemplate">
+		<put-attribute name="title" value="VENDOR PAYMENT" />
+		<put-attribute name="body" value="/pages/proc/vendorpayment.jsp" />
+	</definition>
+	<definition name="proc.vendorpayreg" extends="mainTemplate">
+		<put-attribute name="title" value="VENDOR PAYMENT" />
+		<put-attribute name="body" value="/pages/proc/vendorpaymentreg.jsp" />
+	</definition>
+	<definition name="proc.purorder" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE ORDER" />
+		<put-attribute name="body" value="/pages/proc/purorder.jsp" />
+	</definition>
+	<definition name="proc.purorder.details" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE ORDER DETAILS" />
+		<put-attribute name="body" value="/pages/proc/purorderdet.jsp" />
+	</definition>
+	<definition name="proc.purordreg" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE ORDER REGISTER" />
+		<put-attribute name="body" value="/pages/proc/purordreg.jsp" />
+	</definition>
+	<!-- End Procurement Module -->
+	<!-- Store Mgnt Module -->
+	
+	<!-- End Store Mgnt Module -->
+	<!-- Account Module -->
+	
+	<!-- End Account Module -->
+	<!-- Report Module -->
+	<definition name="repinv.stockreg" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK REGISTER" />
+		<put-attribute name="body" value="/pages/report/rpt_invstkreg.jsp" />
+	</definition>
+	
+	<definition name="repinv.expreg" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK REGISTER" />
+		<put-attribute name="body" value="/pages/report/rpt_invexpreg.jsp" />
+	</definition>
+	
+	<definition name="repinv.expdistwise" extends="mainTemplate">
+		<put-attribute name="title" value="DISTRIBUTOR WISE EXPIRY REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_invexpdistwise.jsp" />
+	</definition>
+	
+	<definition name="reppos.salesummary" extends="mainTemplate">
+		<put-attribute name="title" value="SALE SUMMARY" />
+		<put-attribute name="body" value="/pages/report/rpt_possalesummary.jsp" />
+	</definition>
+	
+	<definition name="reppos.salereg" extends="mainTemplate">
+		<put-attribute name="title" value="SALE REGISTER" />
+		<put-attribute name="body" value="/pages/report/rpt_possalereg.jsp" />
+	</definition>
+	
+	<definition name="reppos.saleitem" extends="mainTemplate">
+		<put-attribute name="title" value="SALES ITEM REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_possaleitem.jsp" />
+	</definition>
+	
+	<definition name="reppos.doctorwisesale" extends="mainTemplate">
+		<put-attribute name="title" value="DOCTOR WISE SALE REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_posdoctorwisesalesummary.jsp" />
+	</definition>
+	
+	
+	<definition name="repproc.purchasesummary" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE SUMMARY" />
+		<put-attribute name="body" value="/pages/report/rpt_procpurchasesummary.jsp" />
+	</definition>
+	
+	<definition name="repproc.purchasereg" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE REGISTER" />
+		<put-attribute name="body" value="/pages/report/rpt_procpurchasereg.jsp" />
+	</definition>
+	
+	<definition name="repproc.purchaseitemwise" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE ITEM WISE REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_procpurchaseitem.jsp" />
+	</definition>
+	<!-- ============================== -->
+	
+	<definition name="reppos.salereturnsummary" extends="mainTemplate">
+		<put-attribute name="title" value="SALE RETURN SUMMARY" />
+		<put-attribute name="body" value="/pages/report/rpt_possalereturnsummary.jsp" />
+	</definition>
+	
+	<definition name="reppos.salereturnreg" extends="mainTemplate">
+		<put-attribute name="title" value="SALE RETURN REGISTER" />
+		<put-attribute name="body" value="/pages/report/rpt_possalereturnreg.jsp" />
+	</definition>
+	
+	<definition name="reppos.salereturnitemwise" extends="mainTemplate">
+		<put-attribute name="title" value="SALES RETURN ITEM WISE REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_possalereturnitemwise.jsp" />
+	</definition>
+	
+	
+	<definition name="repproc.purchasereturnsummary" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE RETURN SUMMARY" />
+		<put-attribute name="body" value="/pages/report/rpt_procpurchasereturnsummary.jsp" />
+	</definition>
+	
+	<definition name="repproc.purchasereturnreg" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE RETURN REGISTER" />
+		<put-attribute name="body" value="/pages/report/rpt_procpurchasereturnreg.jsp" />
+	</definition>
+	
+	<definition name="repproc.purchasereturnitemwise" extends="mainTemplate">
+		<put-attribute name="title" value="PURCHASE RETURN ITEM WISE REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_procpurchasereturnitem.jsp" />
+	</definition>
+	<definition name="reptax.taxsummary" extends="mainTemplate">
+		<put-attribute name="title" value="TAX SUMMARY REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_taxsummary.jsp" />
+	</definition>
+	<definition name="reptax.taxslabsummary" extends="mainTemplate">
+		<put-attribute name="title" value="TAX SLAB SUMMARY REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_tax_slabsummary.jsp" />
+	</definition>
+	<definition name="reptax.taxintegrity" extends="mainTemplate">
+		<put-attribute name="title" value="TAX INTEGRITY REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_taxintegrity.jsp" />
+	</definition>
+	<definition name="repproc.freeqtydistwise" extends="mainTemplate">
+		<put-attribute name="title" value="FREE QTY DIST WISE REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_invfreeqtydistwise.jsp" />
+	</definition>
+	<definition name="reppos.nonmovingitem" extends="mainTemplate">
+		<put-attribute name="title" value="NON MOVING ITEM REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_posnonmoving.jsp" />
+	</definition>
+	<definition name="repinv.stockonvalue" extends="mainTemplate">
+		<put-attribute name="title" value="STOCK ON VALUE REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_invstkonvalue.jsp" />
+	</definition>
+	<definition name="repinv.groupwisestock" extends="mainTemplate">
+		<put-attribute name="title" value="GROUP WISE STOCK REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_invgrpwisestk.jsp" />
+	</definition>
+	<definition name="repinv.vendorwisestock" extends="mainTemplate">
+		<put-attribute name="title" value="VENDOR WISE STOCK REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_invvendorwisestk.jsp" />
+	</definition>
+	<definition name="repinv.manufacturerwisestock" extends="mainTemplate">
+		<put-attribute name="title" value="MANUFACTURER WISE STOCK REPORT" />
+		<put-attribute name="body" value="/pages/report/rpt_invmanufacturerwisestk.jsp" />
+	</definition>
+	<definition name="reppos.customerledger" extends="mainTemplate">
+		<put-attribute name="title" value="CUSTOMER LEDGER" />
+		<put-attribute name="body" value="/pages/report/rpt_customerledger.jsp" />
+	</definition>
+	<definition name="repproc.vendorledger" extends="mainTemplate">
+		<put-attribute name="title" value="VENDOR LEDGER" />
+		<put-attribute name="body" value="/pages/report/rpt_vendorledger.jsp" />
+	</definition>
+	<definition name="repproc.purorderadj" extends="mainTemplate">
+		<put-attribute name="title" value="Purchase Order Adj" />
+		<put-attribute name="body" value="/pages/report/rpt_purchaseorderadj.jsp" />
+	</definition>
+	<definition name="reptax.btwocs" extends="mainTemplate">
+		<put-attribute name="title" value="B2CS" />
+		<put-attribute name="body" value="/pages/report/rpt_taxbtwocs.jsp" />
+	</definition>
+	<definition name="reppos.esiongcsalereg" extends="mainTemplate">
+		<put-attribute name="title" value="ESI/ONGC" />
+		<put-attribute name="body" value="/pages/report/rpt_posesiongcsalereg.jsp" />
+	</definition>
+	<definition name="reppos.scheduleh1reg" extends="mainTemplate">
+		<put-attribute name="title" value="SHEDULE H1" />
+		<put-attribute name="body" value="/pages/report/rpt_posscheduleh1reg.jsp" />
+	</definition>
+	<definition name="reppos.tbreg" extends="mainTemplate">
+		<put-attribute name="title" value="TB REG" />
+		<put-attribute name="body" value="/pages/report/rpt_postbreg.jsp" />
+	</definition>
+	<definition name="reptax.hsn" extends="mainTemplate">
+		<put-attribute name="title" value="HSN" />
+		<put-attribute name="body" value="/pages/report/rpt_taxhsn.jsp" />
+	</definition>
+	<definition name="gstr3b.hsn" extends="mainTemplate">
+		<put-attribute name="title" value="GSTR3B" />
+		<put-attribute name="body" value="/pages/report/rpt_taxgstr3b.jsp" />
+	</definition>
+	<definition name="gstr9a.hsn" extends="mainTemplate">
+		<put-attribute name="title" value="GSTR9A" />
+		<put-attribute name="body" value="/pages/report/rpt_taxgstr9a.jsp" />
+	</definition>
+	<!-- End Report Module -->
+	
+	<!-- Start Account Module -->
+	<definition name="acc.ledger" extends="mainTemplate">
+		<put-attribute name="title" value="Account Group Setup" />
+		<put-attribute name="body" value="/pages/accounts/accgroup.jsp" />
+	</definition>
+	
+	<definition name="acc.accsetup" extends="mainTemplate">
+		<put-attribute name="title" value="Account Setup" />
+		<put-attribute name="body" value="/pages/accounts/accontsetup.jsp" />
+	</definition>
+	
+		<definition name="acc.journal" extends="mainTemplate">
+		<put-attribute name="title" value="Journal Entry" />
+		<put-attribute name="body" value="/pages/accounts/journal.jsp" />
+	</definition>
+	
+		 <definition name="acc.chartofacc" extends="mainTemplate">
+		<put-attribute name="title" value="Chart of Accounts" />
+		<put-attribute name="body" value="/pages/accounts/chartofacc.jsp" />
+	</definition>
+	
+	
+	
+	<!-- End Account Module -->
+	<definition name="repledger" extends="mainTemplate">
+		<put-attribute name="title" value="Ledger account Display" />
+		<put-attribute name="body" value="/pages/report/account/rpt_ledgerView.jsp" />
+	</definition>
+	
+	<definition name="reptrial" extends="mainTemplate">
+		<put-attribute name="title" value="Trial Balance Display" />
+		<put-attribute name="body" value="/pages/report/account/rpt_trial_balance.jsp" />
+	</definition>
+	
+	<definition name="rptbalancesheet" extends="mainTemplate">
+		<put-attribute name="title" value="Balance Sheet" />
+		<put-attribute name="body" value="/pages/report/account/rpt_balance_sheet_view.jsp" />
+	</definition>
+	
+		<definition name="rptaccountbalacne" extends="mainTemplate">
+		<put-attribute name="title" value="Account balance" />
+		<put-attribute name="body" value="/pages/report/account/rpt_account_balance_view.jsp" />
+	</definition>
+	
+	
+		<definition name="rptprofitandloss" extends="mainTemplate">
+		<put-attribute name="title" value="profit and loss " />
+		<put-attribute name="body" value="/pages/report/account/rpt_profitandloss.jsp" />
+	</definition>
+	
+	
+	
+		<definition name="dailycollection" extends="mainTemplate">
+		<put-attribute name="title" value="Daily Collection" />
+		<put-attribute name="body" value="/pages/report/account/rpt_dailyCollectonView.jsp" />
+	</definition>
+	 
+		<definition name="dailypayment" extends="mainTemplate">
+		<put-attribute name="title" value="Daily Payment" />
+		<put-attribute name="body" value="/pages/report/account/rpt_dailyPayment.jsp" />
+	</definition>
+	
+	<definition name="repproc.purchasescheduleh" extends="mainTemplate">
+		<put-attribute name="title" value="H Register" />
+		<put-attribute name="body" value="/pages/report/rpt_hregister.jsp" />
+	</definition>
+	<definition name="repproc.purchasescheduleh1" extends="mainTemplate">
+		<put-attribute name="title" value="H1 Register" />
+		<put-attribute name="body" value="/pages/report/rpt_h1register.jsp" />
+	</definition>
+	<definition name="repproc.purchasenarco" extends="mainTemplate">
+		<put-attribute name="title" value="Narco Register" />
+		<put-attribute name="body" value="/pages/report/rpt_narcoregister.jsp" />
+	</definition>
+	
+    <definition name="admin.user" extends="mainTemplate">
+		<put-attribute name="title" value="User" />
+		<put-attribute name="body" value="/pages/admin/user.jsp" />
+	</definition>
+	<definition name="admin.role" extends="mainTemplate">
+		<put-attribute name="title" value="Role" />
+		<put-attribute name="body" value="/pages/admin/role.jsp" />
+	</definition>
+	<definition name="admin.map" extends="mainTemplate">
+		<put-attribute name="title" value="Map" />
+		<put-attribute name="body" value="/pages/admin/userrolemapping.jsp" />
+	</definition>
+	
+</tiles-definitions>
